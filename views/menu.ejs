@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+<%- include("../partials/nav") %>
+
+<h1>This is the menu page</h1>
+<% const mains = [] %>
+<% const desserts = [] %>
+<% const sides = [] %>
+
+<% menu.forEach(item => { %>
+ <% if (item.category === "mains") { %>
+    <% mains.push(item) %>
+ <% } %> 
+ <% if (item.category === "desserts") { %>
+    <% desserts.push(item) %>
+ <% } %> 
+ <% if (item.category === "sides") { %>
+    <% sides.push(item) %>
+ <% } %> 
+<% }) %>
+
+<h2>Mains</h2>
+<% mains.forEach(item => { %>
+    <h3>Name: <%- item.name %> <%- item.rating === 5 ? "⭐": ""%></h3>
+    <p>Price: <%- item.price %></p>
+    <p>Ratings: <%- item.rating %></p>
+    <p>Details: <%- item.details %></p>
+    <br>
+   <% }) %>
+   <hr>
+<br>
+<h2>Sides</h2>
+<% sides.forEach(item => { %>
+    <h3>Name: <%- item.name %> <%- item.rating === 5 ? "⭐": ""%></h3>
+    <p>Price: <%- item.price %></p>
+    <p>Ratings: <%- item.rating %></p>
+    <p>Details: <%- item.details %></p>
+    <br>
+   <% }) %>
+<hr>
+<br>
+<h2>Desserts</h2>
+<% desserts.forEach(item => { %>
+ <h3>Name: <%- item.name %> <%- item.rating === 5 ? "⭐": ""%></h3>
+ <p>Price: <%- item.price %></p>
+ <p>Ratings: <%- item.rating %></p>
+ <p>Details: <%- item.details %></p>
+ <br>
+<% }) %>
+    
+    
+<%- include("../partials/html-end") %>

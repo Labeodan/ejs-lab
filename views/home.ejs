@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%- resturant.name %></title>
+</head>
+<body>
+
+<%- include("../partials/nav") %>
+
+<h1>Resturant Details</h1>
+
+<p><b>Name:</b> <%- resturant.name %></p>
+<p><b>Address:</b> <%- resturant.address %></p>
+<p><b>Phone:</b> <%- resturant.phone %></p>
+
+<h3>WE ARE <%- resturant.isOpen? "OPEN" : "CLOSED"%></h3>
+
+
+
+<%- include("../partials/html-end") %>
