@@ -100,17 +100,6 @@ app.get('/menu/:category', (req, res) => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
 app.listen(3000, () => {
-    console.log(`App listning on port ${port}`)
+    console.log(`App listning on port ${port}!`)
 });
